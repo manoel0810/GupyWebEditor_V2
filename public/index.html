@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Configuração</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Editor de Grupos de Pesquisa</h1>
+        <button id="logout-btn">Sair</button>
+    </header>
+
+    <main class="editor-container">
+        <div id="groups-list">
+            </div>
+
+        <div class="actions">
+            <button id="add-group-btn" class="btn-secondary">+ Adicionar Grupo</button>
+            <button id="save-btn" class="btn-primary">Salvar Alterações</button>
+        </div>
+    </main>
+
+    <template id="group-template">
+        <div class="group-card">
+            <button class="delete-group-btn">×</button>
+            <div class="form-group">
+                <label>Chave de Busca (key)</label>
+                <input type="text" class="group-key" placeholder="ex: .net core developer">
+            </div>
+            <div class="form-group">
+                <label>E-mails (separados por vírgula)</label>
+                <input type="text" class="group-emails" placeholder="email1@teste.com, email2@teste.com">
+            </div>
+            <div class="form-group small">
+                <label>Group ID</label>
+                <input type="number" class="group-id" placeholder="1">
+            </div>
+            <div class="form-group-inline">
+                <input type="checkbox" class="group-remote">
+                <label>Apenas Remoto (remoteOnly)</label>
+            </div>
+            <div class="form-group-inline">
+                <input type="checkbox" class="group-skip">
+                <label>Pular (skip)</label>
+            </div>
+        </div>
+    </template>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
